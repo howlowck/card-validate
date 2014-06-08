@@ -57,10 +57,10 @@ describe("Cred Validation Capabilities", function() {
 
   it ("should validate diners club", function () {
     var actual = Cred.validateNumber('30569309025904');
-    expect(actual.name).toEqual('Diner\'s Club');
+    expect(actual.name).toEqual('Diner\'s Club International');
 
     actual = Cred.validateNumber('38520000023237');
-    expect(actual.name).toEqual('Diner\'s Club');
+    expect(actual.name).toEqual('Diner\'s Club International');
   });
 });
 

@@ -3,6 +3,7 @@ var Card = function (data) {
   this.fullName;
   this.shortName;
   this.regex;
+  this.partialRegex;
   this.validLength;
   this.isLuhn;
   this.initialize(data);
@@ -12,6 +13,7 @@ Card.prototype.initialize = function (data) {
   this.fullName = data['name'];
   this.shortName = data['shortName'];
   this.regex = data['regex'];
+  this.partialRegex = data['partial'];
   this.validLength = data['validLength'];
   this.isLuhn = data['luhn'];
 };
@@ -20,9 +22,9 @@ Card.prototype.sanitize = function (num) {
   return num.replace(' ', '');
 };
 
-Card.prototype.detectType = function (val) {
-  val = this.sanitize(val);
-  var regex = this.partialRegex[val.length];
+Card.prototype.testPartial = function (num) {
+  val = this.sanitize(num);
+  return this.partialRegex.test(val);
 };
 
 Card.prototype.validateNumber = function (num) {
