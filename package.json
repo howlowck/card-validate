@@ -1,25 +1,25 @@
 {
-  "name": "words-to-num",
-  "version": "0.0.2",
-  "description": "Converts English Numeric Words to Integer",
+  "name": "card-validate",
+  "version": "0.0.1",
+  "description": "Validate Credit Card",
   "author": {
     "name" : "Hao Luo",
     "email": "howlowck@gmail.com"
   },
   "keywords": [
-    "number",
-    "word",
-    "english",
-    "converter"
+    "payment",
+    "card",
+    "validation",
+    "validate"
   ],
   "main": "./public/js/main.js",
   "dependencies": {
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/howlowck/words-to-num.git"
+    "url": "http://github.com/howlowck/card-validate.git"
   },
-  "homepage": "https://howlowck.github.com/words-to-num",
+  "homepage": "https://howlowck.github.com/card-validate",
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.6.0",
