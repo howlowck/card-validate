@@ -91,7 +91,7 @@ var discover = new Card({
   });
 
 var jcb = new Card({
-  partial: /3($|5($|2($|[89]($|[0-9]))|[3-8]($|[0-9])))/,
+  partial: /^3($|5($|2($|[89]($|[0-9]))|[3-8]($|[0-9])))/,
   regex: /^(3088|3096|3112|3158|3337|35(2[89][0-9]{4}|[3-8][0-9]{5}))/,
   validLength: [16],
   luhn: true,
@@ -134,6 +134,7 @@ var dinersUS = new Card({
   name: 'Diner\'s Club US/Canada',
   shortName: 'diners-us'
 });
+
 var CardVal = {
   cards: [visa, discover, jcb, amex, master, diners, dinersUS],
   detectTypes: function (cardNum) {
